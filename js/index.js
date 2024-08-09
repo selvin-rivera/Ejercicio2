@@ -77,5 +77,5 @@ function limpiar() {
     document.getElementById("primerNota").value = ""
     document.getElementById("segundaNota").value = ""
     document.getElementById("tercerNota").value = ""
-    document.getElementById('mensaje').textContent = "";
+    document.getElementById('resultado').textContent = "";
 }
