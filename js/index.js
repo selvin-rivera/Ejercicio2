@@ -1,7 +1,7 @@
 function calcularNotaFinal() {
     let parcial1 = parseInt (document.getElementById("primerNota").value)
     let parcial2 = parseInt (document.getElementById("segundaNota").value)
-    let parcial3 = parseInt(document.getElementById("segundaNota").value)
+    let parcial3 = parseInt(document.getElementById("tercerNota").value)
     
      while (true)
  {
@@ -30,7 +30,23 @@ function calcularNotaFinal() {
      return;
     } 
     
-     while (true)
+     if (parcial1 > 30) {
+        warning ("El valor del Primer Parcial no puede ser mayor a 30.");
+        return false;
+    }
+
+    if (parcial2 > 30) {
+        warning ("El valor del Segundo Parcial no puede ser mayor a 30.");
+        return false;
+    }
+
+    // Validar que parcial3 no sea mayor a 40
+    if (parcial3 > 40) {
+        warning ("El valor del Tercer Parcial no puede ser mayor a 40.");
+        return false;
+    }
+
+     /*while (true)
  {
      if (parcial1 > 30 || parcial2 > 30)
      {
@@ -45,7 +61,7 @@ function calcularNotaFinal() {
         break;
      }
      return;  
- }
+ }*/
 
     let notaFinal = parcial1 + parcial2 + parcial3;
     
