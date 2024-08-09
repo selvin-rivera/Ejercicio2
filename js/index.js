@@ -15,12 +15,12 @@ function calcularNotaFinal() {
      else if (!parcial2)
      {
 
-        warning("Una de las notas ingresadas no tiene el formato válido");
+        warning ("Una de las notas ingresadas no tiene el formato válido");
 
      }
      else if (!parcial3)
      {
-         warning("Una de las notas ingresadas no tiene el formato válido");
+         warning ("Una de las notas ingresadas no tiene el formato válido");
          
      }
      else
@@ -34,29 +34,19 @@ function calcularNotaFinal() {
  {
      if (parcial1 > 30 || parcial2 > 30)
      {
-        warning("La nota del primero o segundo parcial sobrepasa del 30%");
+        warning ("La nota del primero o segundo parcial sobrepasa del 30%");
      }
-     else
-     {
-         break;
-     }
-         return;
- }
-
-    while (true)
- {
-     //Validación del tercer parcial que sobrepasa el 40%
-     if (parcial3 > 40)
+    else if (parcial3 > 40)
      {
         warning ("La nota del tercer parcial sobrepasa del 40%");
      }
      else
      {
-         break;
+        break;
      }
-         return;
+     return;  
  }
-    
+
     let notaFinal = parcial1 + parcial2 + parcial3;
     
         let mensaje = "";
@@ -87,5 +77,5 @@ function limpiar() {
     document.getElementById("primerNota").value = ""
     document.getElementById("segundaNota").value = ""
     document.getElementById("tercerNota").value = ""
-    document.getElementById("resultado").value = ""
+    document.getElementById('mensaje').textContent = "";
 }
